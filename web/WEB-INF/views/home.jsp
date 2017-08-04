@@ -21,6 +21,8 @@
 <div>
     <a href="http://www.baidu.com">Link</a>
     <input type="text" name="date" id="date">
+    <input type="text" name="question" id="question">
+    <button type="submit" name="search" id="search">A button element</button>
 </div>
 <script type="text/javascript" src="<c:url value="/resources/jquery/jquery.js"/>"></script>
 <script type="text/javascript" src="<c:url value="/resources/jqueryui/jquery-ui.js"/>"></script>
@@ -31,6 +33,17 @@
         })
     })
     $("#date").datepicker();
+/*    $(".selector").button({
+        classes:{
+            "ui-button":"ui-corner-all"
+        }
+    });*/
+    $( function() {
+        $( ".widget input[type=submit], .widget a, .widget button" ).button();
+        $( "button, input, a" ).click( function( event ) {
+            event.preventDefault();
+        } );
+    } );
 </script>
 </body>
 </html>
