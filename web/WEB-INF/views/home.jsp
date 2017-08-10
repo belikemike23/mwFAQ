@@ -22,7 +22,7 @@
     <a href="http://www.baidu.com">Link</a>
     <input type="text" name="date" id="date">
     <input type="text" name="question" id="question">
-    <button type="submit" name="search" id="search">A button element</button>
+    <input type="button" value="提交" name="search" id="search" class="ui-button"/>
 </div>
 <script type="text/javascript" src="<c:url value="/resources/jquery/jquery.js"/>"></script>
 <script type="text/javascript" src="<c:url value="/resources/jqueryui/jquery-ui.js"/>"></script>
@@ -33,17 +33,12 @@
         })
     })
     $("#date").datepicker();
-/*    $(".selector").button({
-        classes:{
-            "ui-button":"ui-corner-all"
-        }
-    });*/
-    $( function() {
-        $( ".widget input[type=submit], .widget a, .widget button" ).button();
-        $( "button, input, a" ).click( function( event ) {
-            event.preventDefault();
-        } );
-    } );
+    $("#search").click(function () {
+        type:"POST",
+            //url: //你的请求程序页面随便啦
+            //data://请求需要发送的处理数据
+        window.location.href = '/answer';
+    });
 </script>
 </body>
 </html>
