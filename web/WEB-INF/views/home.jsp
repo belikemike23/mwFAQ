@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%--
   Created by IntelliJ IDEA.
   User: mike.wang
@@ -20,9 +21,15 @@
 <span>${name}</span>
 <div>
     <a href="http://www.baidu.com">Link</a>
-    <input type="text" name="date" id="date">
-    <input type="text" name="question" id="question">
-    <input type="button" value="提交" name="search" id="search" class="ui-button"/>
+    <hr/>
+    <form:form action="/answer" method="post" modelAttribute="questionentity" role="form" >
+        <div class="form-group">
+            <label for="content">Content:</label>
+            <textarea class="form-control" id="content" name="keyword"  placeholder="Please Input Content"></textarea>
+        </div>
+        <input type="text" name="date" id="date">
+        <p><button type="submit"  class="ui-button">提交</button></p>
+    </form:form>
 </div>
 <script type="text/javascript" src="<c:url value="/resources/jquery/jquery.js"/>"></script>
 <script type="text/javascript" src="<c:url value="/resources/jqueryui/jquery-ui.js"/>"></script>
@@ -31,14 +38,8 @@
         $("a").click(function () {
             alert(  "Thanks for visiting")
         })
+        $("#date").datepicker();
     })
-    $("#date").datepicker();
-    $("#search").click(function () {
-        type:"POST",
-            //url: //你的请求程序页面随便啦
-            //data://请求需要发送的处理数据
-        window.location.href = '/answer';
-    });
 </script>
 </body>
 </html>

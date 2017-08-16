@@ -11,6 +11,8 @@
     <title>results</title>
 </head>
 <body>
-<h1>This page shows the results</h1>
+<span>this page shows the results</span><br>
+<span>${questionentity.keyword}</span>
+<span>${questionentity.date}</span>
 </body>
 </html>
