@@ -1,8 +1,9 @@
 package com.mw.controller;
 
-import com.mw.model.QuestionEntity;
+import com.mw.entity.BlogEntity;
+import com.mw.repository.BlogRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -11,9 +12,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Created by mike.wang on 2017/7/19.
  */
 @Controller
-public class Answer {
+public class AnswerController {
+
+    @Autowired
+    BlogRepository blogRepository;
     @RequestMapping(value = "/answer",method = RequestMethod.POST)
-    public String GetAnswer(@ModelAttribute("questionentity") QuestionEntity questionEntity){
+    public String GetAnswer(@ModelAttribute("blogentity") BlogEntity blogEntity){
+        blogRepository.saveAndFlush(blogEntity);
         return "SearchResults";
     }
 }

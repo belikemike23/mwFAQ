@@ -22,12 +22,12 @@
 <div>
     <a href="http://www.baidu.com">Link</a>
     <hr/>
-    <form:form action="/answer" method="post" modelAttribute="questionentity" role="form" >
+    <form:form action="/answer" method="post" modelAttribute="blogentity" role="form" >
         <div class="form-group">
             <label for="content">Content:</label>
-            <textarea class="form-control" id="content" name="keyword"  placeholder="Please Input Content"></textarea>
+            <textarea class="form-control" id="content" name="title"  placeholder="Please Input Content"></textarea>
         </div>
-        <input type="text" name="date" id="date">
+        <input type="text" name="content" id="date">
         <p><button type="submit"  class="ui-button">提交</button></p>
     </form:form>
 </div>

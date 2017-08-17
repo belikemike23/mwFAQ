@@ -12,7 +12,7 @@
 </head>
 <body>
 <span>this page shows the results</span><br>
-<span>${questionentity.keyword}</span>
-<span>${questionentity.date}</span>
+<span>${blogentity.title}</span>
+<span>${blogentity.content}</span>
 </body>
 </html>
