@@ -4,8 +4,11 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="connection.url">jdbc:mysql://localhost:3306/springdemo</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/springdemo?characterEncoding=utf-8&amp;serverTimezone=UTC&amp;useSSL=false</property>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">23412169oO</property>
         <mapping resource="com/mw/entity/BlogEntity.hbm.xml"/>
         <mapping class="com.mw.entity.BlogEntity"/>
         <mapping resource="com/mw/entity/UserEntity.hbm.xml"/>

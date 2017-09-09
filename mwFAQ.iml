@@ -21,7 +21,7 @@
     <facet type="hibernate" name="Hibernate">
       <configuration>
         <datasource-map>
-          <unit-entry name="hibernate.cfg.xml" value="2e71f83a-7f9c-4d49-8c9b-ef283c4cc245" />
+          <unit-entry name="hibernate.cfg.xml" value="351b1e66-99e6-4198-bf46-308351faa973" />
         </datasource-map>
         <naming-strategy-map />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/hibernate.cfg.xml" />
@@ -30,9 +30,9 @@
     <facet type="jpa" name="JPA">
       <configuration>
         <setting name="validation-enabled" value="true" />
-        <setting name="provider-name" value="" />
+        <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
-          <factory-entry name="demo" />
+          <factory-entry name="demo" value="1baff8d8-6d90-4ecc-ba77-bd90cd56b80a" />
           <factory-entry name="entityManagerFactory" />
         </datasource-mapping>
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/META-INF/persistence.xml" />
@@ -48,9 +48,9 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="Spring-4.3.9.RELEASE" level="project" />
     <orderEntry type="library" exported="" name="Spring MVC-4.3.9.RELEASE" level="project" />
-    <orderEntry type="library" name="jstl" level="project" />
-    <orderEntry type="library" name="Hibernate 5.2.10-5.2.10" level="project" />
-    <orderEntry type="library" name="mysql:mysql-connector-java:6.0.5" level="project" />
-    <orderEntry type="library" name="Spring Data JPA-1.0.0" level="project" />
+    <orderEntry type="library" exported="" name="jstl" level="project" />
+    <orderEntry type="library" exported="" name="Hibernate 5.2.10-5.2.10" level="project" />
+    <orderEntry type="library" exported="" name="mysql:mysql-connector-java:6.0.5" level="project" />
+    <orderEntry type="library" exported="" name="Spring Data JPA-1.0.0" level="project" />
   </component>
 </module>

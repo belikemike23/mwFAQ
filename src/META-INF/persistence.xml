@@ -9,10 +9,10 @@
 		<class>com.mw.entity.BlogEntity</class>
 		<!-- MYSql 的连接 -->
 		<properties>
-			<property name="hibernate.connection.driver_class" value="" />
-			<property name="hibernate.connection.url" value="" />
-			<property name="hibernate.connection.username" value="" />
-			<property name="hibernate.connection.password" value="" />
+			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+			<property name="connection.url" value="jdbc:mysql://localhost:3306/springdemo?characterEncoding=utf-8&amp;serverTimezone=UTC&amp;useSSL=false"/>
+			<property name="hibernate.connection.username" value="root" />
+			<property name="hibernate.connection.password" value="23412169oO" />
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
 			<property name="hibernate.archive.autodetection" value="class"/>
 			<property name="hibernate.show_sql" value="true"/>
